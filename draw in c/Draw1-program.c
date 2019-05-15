@@ -17,14 +17,27 @@
  */
 
 /*
- * Drawing implementation for primitive graphics routines
+ * The complete Draw program
  */
 
-void Draw::drawTriangle(
-	float x1, float y1, float z1,
-	float x2, float y2, float z2,
-	float x3, float y3, float z3) {}
+/*
+ * Compile with "g++ Draw-program.c -I /usr/include -l GL -l X11"
+ */
 
-void Draw::drawScene() {}
+#include <X11/Xlib.h>
+#include <X11/Xutil.h>
+#include <X11/Xos.h>
 
-int Draw::main() {return 0;}
+#include <GL/glx.h>
+#include <GL/gl.h>
+
+#include <unistd.h>
+#include <stdio.h>
+
+#include "BaseTypes.c"
+#include "Draw-access.c"
+#include "Draw-design.c"
+#include "Draw1-access.c"
+#include "Draw1-design.c"
+#include "Draw1-main.c"
+

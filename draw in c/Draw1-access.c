@@ -17,11 +17,15 @@
  */
 
 /*
- * Program point of entry that works with the Draw class
+ * Drawing interface to primitive graphics routines.  OpenGL style.
  */
 
-int main() {
-	Draw *d = new Draw();
-	return d->main();
-}
-
+class Draw1 : public Draw {
+public:
+	virtual void drawTriangle(
+		float x1, float y1, float z1,
+		float x2, float y2, float z2,
+		float x3, float y3, float z3);
+	virtual void drawScene();
+	virtual int main();
+};
