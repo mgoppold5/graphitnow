@@ -17,9 +17,11 @@
  */
 
 /*
- * Program point of entry that works with Draw class
+ * Program point of entry that works with the Draw class
  */
 
 int main() {
-	return Draw::main();
+	Draw *d = new Draw();
+	return d->main();
 }
+

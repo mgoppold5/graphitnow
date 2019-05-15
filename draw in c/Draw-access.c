@@ -22,10 +22,10 @@
 
 class Draw {
 public:
-	void drawTriangle(
+	virtual void drawTriangle(
 		float x1, float y1, float z1,
 		float x2, float y2, float z2,
 		float x3, float y3, float z3);
-	void drawScene();
-	static int main();
+	virtual void drawScene();
+	virtual int main();
 };
