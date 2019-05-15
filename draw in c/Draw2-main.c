@@ -17,11 +17,11 @@
  */
 
 /*
- * Program point of entry that works with the Draw1 class
+ * Program point of entry that works with the Draw2 class
  */
 
 int main() {
-	Draw1 *d = new Draw1();
+	Draw2 *d = new Draw2();
 	return d->main();
 }
 

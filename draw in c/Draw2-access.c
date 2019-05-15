@@ -17,11 +17,19 @@
  */
 
 /*
- * Program point of entry that works with the Draw1 class
+ * Drawing interface to primitive graphics routines.
+ * 
+ * This implementation is experimental.  The intention
+ * is that graphics at the lowest levels should be implemented
+ * by programming graphics GPU-s directly.
  */
 
-int main() {
-	Draw1 *d = new Draw1();
-	return d->main();
-}
-
+class Draw2 : public Draw {
+public:
+	virtual void drawTriangle(
+		float x1, float y1, float z1,
+		float x2, float y2, float z2,
+		float x3, float y3, float z3);
+	virtual void drawScene();
+	virtual int main();
+};

@@ -17,11 +17,27 @@
  */
 
 /*
- * Program point of entry that works with the Draw1 class
+ * The complete Draw2 program
  */
 
-int main() {
-	Draw1 *d = new Draw1();
-	return d->main();
-}
+/*
+ * Compile with "g++ Draw2-program.c -I /usr/include -l GL -l X11"
+ */
+
+#include <X11/Xlib.h>
+#include <X11/Xutil.h>
+#include <X11/Xos.h>
+
+#include <GL/glx.h>
+#include <GL/gl.h>
+
+#include <unistd.h>
+#include <stdio.h>
+
+#include "BaseTypes.c"
+#include "Draw-access.c"
+#include "Draw-design.c"
+#include "Draw2-access.c"
+#include "Draw2-design.c"
+#include "Draw2-main.c"
 
