@@ -21,9 +21,9 @@
  */
 
 void Draw2::drawTriangle(
-	float x1, float y1, float z1,
-	float x2, float y2, float z2,
-	float x3, float y3, float z3) {
+	float32 x1, float32 y1, float32 z1,
+	float32 x2, float32 y2, float32 z2,
+	float32 x3, float32 y3, float32 z3) {
 	
 	glBegin(GL_TRIANGLES);
 		glVertex3f(x1, y1, z1);
@@ -44,9 +44,9 @@ void Draw2::drawScene() {
 		glLoadIdentity();
 
 		drawTriangle(
-			0.0f, 1.0f, 0.0f,
-			-1.0f, -1.0f, 0.0f,
-			1.0f, -1.0f, 0.0f);
+			0.0, 1.0, 0.0,
+			-1.0, -1.0, 0.0,
+			1.0, -1.0, 0.0);
 	}
 }
 

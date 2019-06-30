@@ -27,5 +27,8 @@
 #define int32 int
 #define int64 long
 
+#define float32 float
+#define float64 double
+
 #define FALSE (0)
 #define TRUE (1)
