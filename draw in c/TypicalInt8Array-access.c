@@ -22,7 +22,7 @@
 
 class TypicalInt8Array {
 public:
-	int8[] theAry;
+	int8 *theAry;
 	int32 length;
 	int32 capacity;
 

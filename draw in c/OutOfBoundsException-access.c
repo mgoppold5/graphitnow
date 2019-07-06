@@ -16,24 +16,10 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-int8 TypicalInt8Array::getAtIndex(int32 index) {
-	if(index >= length) {
-		OutOfBoundsException *e1 = new OutOfBoundsException();
-		e1->msg = TypicalStringUtils_TypicalStringFromUnsafeStr(
-			"out of bounds");
-		throw e1;
-	}
+/*
+ * Exception, which occurs when an attempt is made,
+ * to access something in an area which is out of bounds.
+ */
 
-	return theAry[index];
-}
-
-void TypicalInt8Array::setAtIndex(int32 index, int8 value) {
-	if(index >= length) {
-		OutOfBoundsException *e1 = new OutOfBoundsException();
-		e1->msg = TypicalStringUtils_TypicalStringFromUnsafeStr(
-			"out of bounds");
-		throw e1;
-	}
-
-	theAry[index] = value;
-}
+class OutOfBoundsException : public RuntimeException {
+};

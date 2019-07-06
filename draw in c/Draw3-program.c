@@ -16,24 +16,37 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-int8 TypicalInt8Array::getAtIndex(int32 index) {
-	if(index >= length) {
-		OutOfBoundsException *e1 = new OutOfBoundsException();
-		e1->msg = TypicalStringUtils_TypicalStringFromUnsafeStr(
-			"out of bounds");
-		throw e1;
-	}
+/*
+ * The complete Draw2 program
+ */
 
-	return theAry[index];
-}
+/*
+ * Compile with "g++ Draw2-program.c -I /usr/include -l GL -l X11"
+ */
 
-void TypicalInt8Array::setAtIndex(int32 index, int8 value) {
-	if(index >= length) {
-		OutOfBoundsException *e1 = new OutOfBoundsException();
-		e1->msg = TypicalStringUtils_TypicalStringFromUnsafeStr(
-			"out of bounds");
-		throw e1;
-	}
+#include <X11/Xlib.h>
+#include <X11/Xutil.h>
+#include <X11/Xos.h>
 
-	theAry[index] = value;
-}
+#include <GL/glx.h>
+#include <GL/gl.h>
+
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "BaseTypes.c"
+#include "TypicalString-access.c"
+#include "RuntimeException-access.c"
+#include "OutOfMemoryException-access.c"
+#include "OutOfBoundsException-access.c"
+#include "TypicalStringUtils-access.c"
+#include "TypicalStringUtils-design.c"
+#include "TypicalInt8Array-access.c"
+#include "TypicalInt8Array-design.c"
+#include "Draw-access.c"
+#include "Draw-design.c"
+#include "Draw3-access.c"
+#include "Draw3-design.c"
+#include "Draw3-main.c"
+

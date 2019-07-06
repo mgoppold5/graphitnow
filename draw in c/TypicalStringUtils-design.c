@@ -16,24 +16,41 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-int8 TypicalInt8Array::getAtIndex(int32 index) {
-	if(index >= length) {
-		OutOfBoundsException *e1 = new OutOfBoundsException();
-		e1->msg = TypicalStringUtils_TypicalStringFromUnsafeStr(
-			"out of bounds");
-		throw e1;
-	}
+int32 TypicalStringUtils_UnsafeStrGetLength(const int8 *str1) {
+	int32 i;
 
-	return theAry[index];
+	i = 0;
+	while(str1[i] != 0) {
+		i += 1;
+	}
+	
+	return i;
 }
 
-void TypicalInt8Array::setAtIndex(int32 index, int8 value) {
-	if(index >= length) {
-		OutOfBoundsException *e1 = new OutOfBoundsException();
-		e1->msg = TypicalStringUtils_TypicalStringFromUnsafeStr(
-			"out of bounds");
+TypicalString * TypicalStringUtils_TypicalStringFromUnsafeStr(
+	const int8 *str1) {
+
+	int32 length;
+	int32 i;
+
+	length = TypicalStringUtils_UnsafeStrGetLength(str1);
+	
+	TypicalString *str2 = new TypicalString();
+	//str2->data = (int8 *) malloc(length);
+	str2->data = new int8[length];
+	
+	if(str2->data == NULL) {
+		OutOfMemoryException *e1 = new OutOfMemoryException();
 		throw e1;
 	}
 
-	theAry[index] = value;
+	i = 0;
+	while(i < length) {
+		str2->data[i] = str1[i];
+		i += 1;
+	}
+
+	str2->length = length;
+	str2->capacity = length;
+	return str2;
 }
