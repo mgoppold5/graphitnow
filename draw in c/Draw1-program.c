@@ -35,6 +35,7 @@
 #include <stdio.h>
 
 #include "BaseTypes.c"
+#include "TypicalInt8Array-access.c"
 #include "Draw-access.c"
 #include "Draw-design.c"
 #include "Draw1-access.c"

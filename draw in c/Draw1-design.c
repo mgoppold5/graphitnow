@@ -47,6 +47,7 @@ void Draw1::drawScene() {
 		glLoadIdentity();
 
 		drawTriangle(
+			NULL,
 			0.0, 1.0, 0.0,
 			-1.0, -1.0, 0.0,
 			1.0, -1.0, 0.0);
