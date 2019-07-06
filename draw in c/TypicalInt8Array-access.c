@@ -17,15 +17,15 @@
  */
 
 /*
- * Drawing implementation for primitive graphics routines
+ * Simple array of 8-bit integers.
  */
 
-void Draw::drawTriangle(
-	TypicalInt8Array *resourceStr,
-	float32 x1, float32 y1, float32 z1,
-	float32 x2, float32 y2, float32 z2,
-	float32 x3, float32 y3, float32 z3) {}
+class TypicalInt8Array {
+public:
+	int8[] theAry;
+	int32 length;
+	int32 capacity;
 
-void Draw::drawScene() {}
-
-int Draw::main() {return 0;}
+	virtual int8 getAtIndex(int32 index);
+	virtual void setAtIndex(int32 index, int8 value);
+};

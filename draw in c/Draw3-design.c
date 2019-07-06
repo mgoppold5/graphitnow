@@ -20,12 +20,17 @@
  * Drawing implementation for primitive graphics routines
  */
 
-void Draw::drawTriangle(
+void Draw3::drawTriangle(
 	TypicalInt8Array *resourceStr,
 	float32 x1, float32 y1, float32 z1,
 	float32 x2, float32 y2, float32 z2,
-	float32 x3, float32 y3, float32 z3) {}
+	float32 x3, float32 y3, float32 z3) {
+}
 
-void Draw::drawScene() {}
+void Draw3::drawScene() {
+}
 
-int Draw::main() {return 0;}
+int Draw3::main() {
+	return 0;
+}
+

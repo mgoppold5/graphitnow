@@ -21,10 +21,13 @@
  */
 
 void Draw1::drawTriangle(
+	TypicalInt8Array *resourceStr,
 	float32 x1, float32 y1, float32 z1,
 	float32 x2, float32 y2, float32 z2,
 	float32 x3, float32 y3, float32 z3) {
 	
+	// resourceStr ignored
+
 	glBegin(GL_TRIANGLES);
 		glVertex3f(x1, y1, z1);
 		glVertex3f(x2, y2, z2);

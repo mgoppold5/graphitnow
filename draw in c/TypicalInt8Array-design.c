@@ -16,16 +16,22 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-/*
- * Drawing implementation for primitive graphics routines
- */
+int8 TypicalInt8Array::getAtIndex(int32 index) {
+	if(index >= length) {
+		RuntimeException e1 = new OutOfBoundsException();
+		e1->msg = "out of bounds";
+		throw e1;
+	}
 
-void Draw::drawTriangle(
-	TypicalInt8Array *resourceStr,
-	float32 x1, float32 y1, float32 z1,
-	float32 x2, float32 y2, float32 z2,
-	float32 x3, float32 y3, float32 z3) {}
+	return theAry[index];
+}
 
-void Draw::drawScene() {}
+void TypicalInt8Array::setAtIndex(int32 index, int8 value) {
+	if(index >= length) {
+		RuntimeException e1 = new OutOfBoundsException();
+		e1->msg = "out of bounds";
+		throw e1;
+	}
 
-int Draw::main() {return 0;}
+	theAry[index] = value;
+}
