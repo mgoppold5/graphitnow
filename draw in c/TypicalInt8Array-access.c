@@ -20,7 +20,7 @@
  * Simple array of 8-bit integers.
  */
 
-class TypicalInt8Array {
+class TypicalInt8Array : public TypicalObject {
 public:
 	int8 *theAry;
 	int32 length;

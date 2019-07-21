@@ -20,7 +20,7 @@
  * Simple string class for 8-bit strings.
  */
 
-class TypicalString {
+class TypicalString : public TypicalObject {
 public:
 	int8 *data;
 	int32 length;

@@ -36,6 +36,7 @@
 #include <stdlib.h>
 
 #include "BaseTypes.c"
+#include "TypicalObject-access.c"
 #include "TypicalString-access.c"
 #include "RuntimeException-access.c"
 #include "OutOfMemoryException-access.c"

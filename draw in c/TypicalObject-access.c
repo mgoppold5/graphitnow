@@ -17,29 +17,8 @@
  */
 
 /*
- * The complete Draw program
+ * Simple object.
  */
 
-/*
- * Compile with "g++ Draw-program.c -I /usr/include -l GL -l X11"
- */
-
-#include <X11/Xlib.h>
-#include <X11/Xutil.h>
-#include <X11/Xos.h>
-
-#include <GL/glx.h>
-#include <GL/gl.h>
-
-#include <unistd.h>
-#include <stdio.h>
-
-#include "BaseTypes.c"
-#include "TypicalObject-access.c"
-#include "TypicalInt8Array-access.c"
-#include "Draw-access.c"
-#include "Draw-design.c"
-#include "Draw1-access.c"
-#include "Draw1-design.c"
-#include "Draw1-main.c"
-
+class TypicalObject {
+};
