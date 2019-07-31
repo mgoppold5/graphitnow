@@ -45,6 +45,9 @@
 #include "TypicalStringUtils-design.c"
 #include "TypicalInt8Array-access.c"
 #include "TypicalInt8Array-design.c"
+#include "TypicalStringUtils2-access.c"
+#include "TypicalStringUtils2-design.c"
+
 #include "Draw-access.c"
 #include "Draw-design.c"
 #include "Draw3-access.c"

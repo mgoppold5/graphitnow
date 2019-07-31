@@ -16,37 +16,8 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-int32 TypicalStringUtils_UnsafeStrGetLength(const int8 *str1) {
-	int32 i;
+/*
+ * Additional utilities for 8-bit strings.
+ */
 
-	i = 0;
-	while(str1[i] != 0) {
-		i += 1;
-	}
-	
-	return i;
-}
-
-TypicalString * TypicalStringUtils_TypicalStringFromUnsafeStr(
-	const int8 *str1) {
-
-	int32 length;
-	int32 i;
-
-	length = TypicalStringUtils_UnsafeStrGetLength(str1);
-	
-	TypicalString *str2 = new TypicalString();
-	//str2->data = (int8 *) malloc(length);
-	str2->data = new int8[length];
-
-	i = 0;
-	while(i < length) {
-		str2->data[i] = str1[i];
-		i += 1;
-	}
-
-	str2->length = length;
-	str2->capacity = length;
-	return str2;
-}
-
+TypicalInt8Array * TypicalStringUtils2_TypicalInt8ArrayFromUnsafeStr(const int8 *str1);
