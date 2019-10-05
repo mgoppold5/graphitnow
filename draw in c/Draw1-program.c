@@ -36,7 +36,7 @@
 
 #include "BaseTypes.c"
 #include "TypicalObject-access.c"
-#include "TypicalInt8Array-access.c"
+#include "TypicalInt32Array-access.c"
 #include "Draw-access.c"
 #include "Draw-design.c"
 #include "Draw1-access.c"
