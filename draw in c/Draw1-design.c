@@ -36,18 +36,18 @@ void Draw1::drawTriangle(
 }
 
 void Draw1::drawScene() {
-	if(FALSE) {
+	if(BASE_FALSE) {
 		glClearColor(1,1,0,1);
 		glClear(GL_COLOR_BUFFER_BIT);
 		glFlush();
 	}
 
-	if(TRUE) {
+	if(BASE_TRUE) {
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glLoadIdentity();
 
 		drawTriangle(
-			NULL,
+			BASE_NULL,
 			0.0, 1.0, 0.0,
 			-1.0, -1.0, 0.0,
 			1.0, -1.0, 0.0);
@@ -75,15 +75,15 @@ int Draw1::main() {
 	XSetWindowAttributes swa;
 
 	dpy = XOpenDisplay(0);
-	if(dpy == NULL) {
+	if(dpy == BASE_NULL) {
 		printf("Could not open the display\n");
 		return 1;
 	}
 
-	XVisualInfo* vi = NULL;
+	XVisualInfo* vi = BASE_NULL;
 	//Attempt to create a double buffered window
 	vi = glXChooseVisual(dpy, DefaultScreen(dpy), doubleBufferedAttribList);
-	if(vi == NULL) {
+	if(vi == BASE_NULL) {
 		printf("Could not create a double buffered window\n");
 		return 1;
 	}
@@ -92,7 +92,7 @@ int Draw1::main() {
 	//Create a GL 2.1 context
 	gl2Context = glXCreateContext(dpy, vi, 0, GL_TRUE);
 
-	if(gl2Context == NULL) {
+	if(gl2Context == BASE_NULL) {
 		printf("Could not create a GL 2.1 context, please check your graphics drivers\n");
 		return 1;
 	}
